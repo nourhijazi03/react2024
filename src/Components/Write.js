@@ -9,7 +9,7 @@ function Write() {
 
   const saveData = async () => {
     const db = getDatabase(app);
-    const newDocRef = push(ref, (db, "nature/fruits"));
+    const newDocRef = push(ref(db, "nature/fruits"));
     set(newDocRef, {
       fruitName: value1,
       fruitDef: value2,

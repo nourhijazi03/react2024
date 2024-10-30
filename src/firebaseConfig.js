@@ -9,6 +9,8 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyCQnkzIKBDebvvqF31pMIkQcnrnlSszI74",
   authDomain: "backend1-5c959.firebaseapp.com",
+  databaseURL:
+    "https://backend1-5c959-default-rtdb.asia-southeast1.firebasedatabase.app/",
   projectId: "backend1-5c959",
   storageBucket: "backend1-5c959.firebasestorage.app",
   messagingSenderId: "133948742234",
