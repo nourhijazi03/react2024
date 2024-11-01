@@ -23,7 +23,8 @@ function Write() {
   };
 
   return (
-    <div>
+    <div className="main">
+      <div>
       <h1>Write Page</h1>
       <input
         type="text"
@@ -38,6 +39,7 @@ function Write() {
       />
       <br />
       <button onClick={saveData}>Save Data</button>
+      </div>
     </div>
   );
 }

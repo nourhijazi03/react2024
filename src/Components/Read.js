@@ -13,22 +13,23 @@ function Read() {
 
     if (snapshot.exists()) {
       setFruitArray(Object.values(snapshot.val()));
-      
     } else {
       alert("error occured");
     }
   };
   return (
-    <div>
+    <div className="main">
+      <div>
       <h1>Read Data</h1>
       <button onClick={fetchData}>Show Data</button>
       <ul>
-        {fruitArray.map((item,index) => (
+        {fruitArray.map((item, index) => (
           <li key={index}>
             {item.fruitName}:{item.fruitDef}
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }

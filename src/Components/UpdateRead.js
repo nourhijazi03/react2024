@@ -25,7 +25,8 @@ function UpdateRead() {
     }
   };
   return (
-    <div>
+    <div className="main">
+      <div>
       <h1>Update Data</h1>
       <button onClick={fetchData}>Show Data</button>
       <ul>
@@ -35,6 +36,7 @@ function UpdateRead() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
