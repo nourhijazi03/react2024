@@ -25,20 +25,20 @@ function Write() {
   return (
     <div className="main">
       <div>
-      <h1>Write Page</h1>
-      <input
-        type="text"
-        value={value1}
-        onChange={(e) => setValue1(e.target.value)}
-      />
-      <br />
-      <input
-        type="text"
-        value={value2}
-        onChange={(e) => setValue2(e.target.value)}
-      />
-      <br />
-      <button onClick={saveData}>Save Data</button>
+        <h1>Write Page</h1>
+        <input
+          type="text"
+          value={value1}
+          onChange={(e) => setValue1(e.target.value)}
+        />
+        <br />
+        <input
+          type="text"
+          value={value2}
+          onChange={(e) => setValue2(e.target.value)}
+        />
+        <br />
+        <button onClick={saveData}>Save Data</button>
       </div>
     </div>
   );

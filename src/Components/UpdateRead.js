@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import app from "../firebaseConfig";
-import { getDatabase, ref, get } from "firebase/database";
+import { getDatabase, ref, get, remove } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 
 function UpdateRead() {
@@ -26,6 +26,14 @@ function UpdateRead() {
       alert("error occured");
     }
   };
+
+  const deleteFruit = async (fruitId) => {
+    const db=getDatabase(app);
+    const dbRef=ref(db,"nature/fruits/"+fruitId);
+    await remove(dbRef);
+    window.location.reload();
+  };
+
   return (
     <div className="main">
       <div>
@@ -40,6 +48,7 @@ function UpdateRead() {
               >
                 Edit
               </button>
+              <button onClick={() => deleteFruit(item.fruitID)}>Delete</button>
             </li>
           ))}
         </ul>
